@@ -20,7 +20,9 @@ declare var NaN: number
  * The application object
  */
 declare var app: Application
-declare interface Application {}
+declare interface Application {
+  appName: string
+}
 
 /**
  * Displays an alert box
@@ -129,7 +131,7 @@ declare function parseInt(text: string, base?: number): number
  * @param default_ The default text to preset the edit field with
  * @param title The title of the dialog;
  */
-declare function prompt(prompt: string, default_?: string, title?: string): string
+declare function prompt(prompt: string, default_?: string, title?: string): string | null
 
 /**
  * Defines the default XML namespace.

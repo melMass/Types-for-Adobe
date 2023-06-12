@@ -363,7 +363,7 @@ declare class Window extends _Control {
    * @param default_ The initial value to be displayed in the text edit field.
    * @param title A string to appear as the title of the dialog. In Windows, this appears in the window’s frame; in Mac OS it appears above the message. The default title string is "Script Prompt".
    */
-  static prompt(prompt: string, default_?: string, title?: string): string
+  static prompt(prompt: string, default_?: string, title?: string): string | null
 
   /**
    * Removes the specified child control from this window’s children array.
@@ -582,11 +582,7 @@ declare class ScriptUIGraphics {
    * @param font The font to use. Default is the font value in this object.
    * @param boundingWidth The bounding width.
    */
-  measureString(
-    text: string,
-    font?: ScriptUIFont,
-    boundingWidth?: number,
-  ): Dimension
+  measureString(text: string, font?: ScriptUIFont, boundingWidth?: number): Dimension
 
   /**
    * Adds a given point to the currentPath, and makes it the current drawing position.
@@ -2173,7 +2169,7 @@ declare class Point extends Array<number> {
   /**
    * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
    */
-  y: number;
+  y: number
 }
 
 /**
@@ -2189,7 +2185,7 @@ declare class Dimension extends Array<number> {
   /**
    * The width in pixels.
    */
-  width: number;
+  width: number
 }
 
 /**
@@ -2235,7 +2231,7 @@ declare class Bounds extends Array<number> {
   /**
    * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
    */
-  y: number;
+  y: number
 }
 
 /**

@@ -1197,6 +1197,10 @@ declare class TrackItem {
   /**
    *
    */
+  readonly nodeId: string
+  /**
+   *
+   */
   readonly components: any
 
   /**
@@ -2267,7 +2271,7 @@ declare class MarkerCollection {
   /**
    *
    */
-  createMarker(start: number, name: string, duration: number, comments: string): Marker
+  createMarker(start: number, name?: string, duration?: number, comments?: string): Marker
 
   /**
    *
