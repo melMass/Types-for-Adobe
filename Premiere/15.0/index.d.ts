@@ -1437,6 +1437,17 @@ declare class ProjectItem {
   getProjectMetadata(): string
 
   /**
+   * Returns a JSON string to the user with all the metadata from the current project view layout
+   *
+   * A JSON string that can be parsed with JSON.parse() method in the Javascript layer.
+   * This generates a list of objects, each object representing a column.
+   * Each object will contain 4 key/value pairs:
+   * ColumnName, ColumnValue, ColumnID, ColumnPath. ColumnName and ColumnValue
+   * serve as informational key/value.
+   * ColumnID and ColumnPath can be used to modify that column via the method setProjectMetadata() or setXMPMetadata().
+   */
+  getProjectColumnsMetadata(): string
+  /**
    *
    */
   getProxyPath(): string
